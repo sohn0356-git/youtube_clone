@@ -9,10 +9,10 @@ export const GlobalStyle = createGlobalStyle`
   }
 `;
 
-export const Container = styled.div`
+export const AppContainer = styled.div`
   display: flex;
   flex-direction: column;
-  align-items: center;
+  height: 100vh;
 `;
 
 export const Header = styled.header`
@@ -22,33 +22,100 @@ export const Header = styled.header`
   display: flex;
   align-items: center;
   justify-content: space-between;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 1000;
+  box-sizing: border-box;
 `;
 
 export const Logo = styled.div`
+  display: flex;
+  align-items: center;
   color: white;
   font-size: 24px;
   font-weight: bold;
+
+  img {
+    height: 50px; /* 로고 크기 증가 */
+    margin-right: 10px;
+  }
 `;
 
-export const SearchBar = styled.input`
-  padding: 10px;
-  width: 50%;
+export const SearchContainer = styled.div`
+  display: flex;
+  align-items: center;
+  width: 40%;
+  max-width: 500px; /* 최대 너비 설정 */
+  height: 40px; /* 검색바 높이 설정 */
+  margin: 0 auto; /* 중앙에 배치 */
+  flex-grow: 1;
+`;
+
+export const SearchInput = styled.input`
+  flex: 1;
+  padding: 0 10px; /* 패딩 조정 */
+  height: 100%; /* 검색 입력 높이 설정 */
   border: none;
-  border-radius: 4px;
+  border-radius: 20px 0 0 20px; /* 왼쪽 모서리 깎기 */
+  font-size: 16px;
+`;
+
+export const SearchButton = styled.button`
+  height: 100%; /* 버튼 높이 설정 */
+  width: 40px; /* 버튼 너비 설정 */
+  border: none;
+  background-color: white;
+  border-radius: 0 20px 20px 0; /* 오른쪽 모서리 깎기 */
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+`;
+
+export const ButtonContainer = styled.div`
+  display: flex;
+  align-items: center;
+  margin-left: auto; /* 오른쪽으로 밀기 */
+`;
+
+export const IconButton = styled.button`
+  background: none;
+  border: none;
+  cursor: pointer;
+  margin-left: 10px;
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 5px;
+
+  &:hover {
+    background-color: rgba(255, 255, 255, 0.2);
+    border-radius: 50%;
+  }
+`;
+
+export const MainContent = styled.div`
+  display: flex;
+  flex: 1;
+  margin-top: 60px;
 `;
 
 export const SidebarContainer = styled.div`
   width: 240px;
   background-color: white;
-  height: 100vh;
+  height: 100%;
   position: fixed;
-  top: 0;
+  top: 60px;
   left: 0;
-  padding-top: 60px;
+  padding-top: 20px;
   box-shadow: 2px 0 5px rgba(0, 0, 0, 0.1);
+  z-index: 900;
 `;
 
 export const VideoGridContainer = styled.div`
+  flex: 1;
   margin-left: 240px;
   padding: 20px;
   display: flex;

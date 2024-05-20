@@ -1,6 +1,6 @@
 // src/App.js
 import React from "react";
-import { GlobalStyle, Container } from "./styles";
+import { GlobalStyle, AppContainer, MainContent } from "./styles";
 import HeaderComponent from "./components/Header";
 import Sidebar from "./components/Sidebar";
 import VideoGrid from "./components/VideoGrid";
@@ -22,11 +22,13 @@ const App = () => {
   return (
     <>
       <GlobalStyle />
-      <HeaderComponent />
-      <Container>
-        <Sidebar />
-        <VideoGrid videos={videos} />
-      </Container>
+      <AppContainer>
+        <HeaderComponent />
+        <MainContent>
+          <Sidebar />
+          <VideoGrid videos={videos} />
+        </MainContent>
+      </AppContainer>
     </>
   );
 };
