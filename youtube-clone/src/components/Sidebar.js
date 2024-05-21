@@ -1,9 +1,16 @@
 // src/components/Sidebar.js
 import React from "react";
-import { SidebarContainer, SidebarMenu, SidebarMenuItem } from "../styles";
+import {
+  SidebarContainer,
+  SidebarMenu,
+  SidebarMenuItem,
+  SidebarDivider,
+} from "../styles";
 import HomeIcon from "@mui/icons-material/Home";
-import VideoLibraryIcon from "@mui/icons-material/VideoLibrary";
+import AttachFileIcon from "@mui/icons-material/AttachFile";
 import SubscriptionsIcon from "@mui/icons-material/Subscriptions";
+import VideoLibraryIcon from "@mui/icons-material/VideoLibrary";
+import HistoryIcon from "@mui/icons-material/History";
 
 const Sidebar = () => {
   return (
@@ -14,12 +21,21 @@ const Sidebar = () => {
           Home
         </SidebarMenuItem>
         <SidebarMenuItem>
-          <VideoLibraryIcon />
+          <AttachFileIcon />
           Shorts
         </SidebarMenuItem>
         <SidebarMenuItem>
           <SubscriptionsIcon />
           Subscriptions
+        </SidebarMenuItem>
+        <SidebarDivider />
+        <SidebarMenuItem>
+          <VideoLibraryIcon />
+          My Account
+        </SidebarMenuItem>
+        <SidebarMenuItem>
+          <HistoryIcon />
+          History
         </SidebarMenuItem>
       </SidebarMenu>
     </SidebarContainer>

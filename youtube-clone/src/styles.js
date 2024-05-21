@@ -136,6 +136,12 @@ export const SidebarMenuItem = styled.div`
   }
 `;
 
+export const SidebarDivider = styled.div`
+  height: 1px;
+  background-color: #ddd;
+  margin: 10px 0;
+`;
+
 export const VideoGridContainer = styled.div`
   flex: 1;
   margin-left: 240px;
