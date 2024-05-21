@@ -114,6 +114,28 @@ export const SidebarContainer = styled.div`
   z-index: 900;
 `;
 
+export const SidebarMenu = styled.div`
+  display: flex;
+  flex-direction: column;
+`;
+
+export const SidebarMenuItem = styled.div`
+  display: flex;
+  align-items: center;
+  padding: 15px 20px;
+  font-size: 18px;
+  color: #333;
+  cursor: pointer;
+
+  &:hover {
+    background-color: #f1f1f1;
+  }
+
+  svg {
+    margin-right: 10px;
+  }
+`;
+
 export const VideoGridContainer = styled.div`
   flex: 1;
   margin-left: 240px;
