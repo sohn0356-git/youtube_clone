@@ -105,18 +105,26 @@ export const MainContent = styled.div`
 export const SidebarContainer = styled.div`
   width: 240px;
   background-color: white;
-  height: 100%;
+  height: calc(100vh - 60px); /* 헤더 높이를 뺀 전체 높이 */
   position: fixed;
   top: 60px;
   left: 0;
-  padding-top: 20px;
+  padding: 20px 0; /* 위아래 패딩 추가 */
   box-shadow: 2px 0 5px rgba(0, 0, 0, 0.1);
   z-index: 900;
+  overflow-y: auto; /* 스크롤 기능 추가 */
+
+  /* 스크롤바 숨기기 */
+  &::-webkit-scrollbar {
+    width: 0;
+    background: transparent; /* 스크롤바 배경색을 투명하게 */
+  }
 `;
 
 export const SidebarMenu = styled.div`
   display: flex;
   flex-direction: column;
+  gap: 10px; /* 메뉴 사이 간격 추가 */
 `;
 
 export const SidebarMenuItem = styled.div`
@@ -132,7 +140,7 @@ export const SidebarMenuItem = styled.div`
   }
 
   svg {
-    margin-right: 10px;
+    margin-right: 15px; /* 아이콘과 글자 사이 간격 추가 */
   }
 `;
 
